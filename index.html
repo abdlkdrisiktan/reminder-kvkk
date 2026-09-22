@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlaç Hatırlatıcı — Gizlilik Politikası</title>
+<style>
+  :root{
+    --teal:#1C4A40;
+    --teal-deep:#14352E;
+    --teal-soft:#E1F5EE;
+    --amber:#EBA94D;
+    --amber-soft:#FAEEDA;
+    --cream:#FBF6EE;
+    --ink:#1B2C28;
+    --muted:#5F6D67;
+    --line:#DCE7E1;
+    --card:#FFFFFF;
+    --bg:var(--cream);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --teal:#8FCBBB;
+      --teal-deep:#0E211C;
+      --teal-soft:#173029;
+      --amber:#F0BC70;
+      --amber-soft:#2B2013;
+      --cream:#12201C;
+      --ink:#EAF3EF;
+      --muted:#9FB0A9;
+      --line:#274038;
+      --card:#172622;
+      --bg:#0E1815;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Work Sans", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 28px 64px;
+  }
+  h1,h2,h3{
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  a { color: var(--teal); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+
+  .page{
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  header.hero{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding: 22px 24px;
+    background: var(--teal-deep);
+    border-radius: 20px;
+    color: var(--cream);
+    margin-bottom: 22px;
+  }
+  header.hero .mark{
+    width:48px; height:48px; border-radius:14px;
+    background: var(--amber);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 22px;
+    flex-shrink:0;
+  }
+  header.hero .titles h1{
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin: 0 0 4px;
+  }
+  header.hero .titles p{
+    margin:0;
+    font-size: 0.85rem;
+    color: var(--amber-soft);
+    opacity: 0.9;
+  }
+
+  .summary{
+    background: var(--teal-soft);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .summary h2{
+    margin: 0 0 10px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-size: 0.78rem;
+  }
+  .summary ul{ margin:0; padding-left: 1.1em; }
+  .summary li{ margin-bottom: 6px; }
+  .summary li:last-child{ margin-bottom:0; }
+
+  nav.toc{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+  }
+  nav.toc p{
+    margin: 0 0 8px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  nav.toc ol{
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 0.92rem;
+  }
+  nav.toc li{ break-inside: avoid; margin-bottom: 6px; }
+  @media (max-width: 520px){ nav.toc ol{ columns: 1; } }
+
+  section{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  section h2{
+    font-size: 1.15rem;
+    margin: 0 0 12px;
+    display:flex; align-items:baseline; gap:10px;
+  }
+  section h2 .num{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: var(--amber);
+    font-size: 0.85rem;
+  }
+  section h3{
+    font-size: 1rem;
+    margin: 18px 0 8px;
+    color: var(--teal);
+  }
+  section p{ margin: 0 0 10px; }
+  section p:last-child{ margin-bottom:0; }
+  section ul{ margin: 0 0 10px; padding-left: 1.2em; }
+  section li{ margin-bottom: 6px; }
+
+  table{
+    width:100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px;
+    font-size: 0.92rem;
+  }
+  th,td{
+    text-align:left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th{ color: var(--muted); font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.02em; }
+
+  .tag{
+    display:inline-block;
+    background: var(--amber-soft);
+    color: var(--teal-deep);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 0.76rem;
+    font-weight: 600;
+  }
+
+  footer{
+    text-align:center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+  footer a{ font-weight:600; }
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="mark">💊</div>
+    <div class="titles">
+      <h1>İlaç Hatırlatıcı</h1>
+      <p>Gizlilik Politikası · Yürürlük tarihi: 22 Eylül 2026</p>
+    </div>
+  </header>
+
+  <div class="summary">
+    <h2>Özet</h2>
+    <ul>
+      <li>İlaç, doz ve hatırlatma bilgileriniz yalnızca <strong>cihazınızda</strong> saklanır; sağlık verileriniz hiçbir sunucuya gönderilmez.</li>
+      <li>Uygulamayı iyileştirmek için Google Firebase üzerinden <strong>anonim, toplu kullanım istatistiği</strong> toplanır (Firebase Analytics).</li>
+      <li>Hesap oluşturma, giriş yapma veya reklam gösterimi yoktur.</li>
+      <li>İstediğiniz zaman uygulamayı kaldırarak tüm yerel verileri silebilirsiniz.</li>
+    </ul>
+  </div>
+
+  <nav class="toc">
+    <p>İçindekiler</p>
+    <ol>
+      <li><a href="#giris">Giriş</a></li>
+      <li><a href="#sorumlu">Veri sorumlusu</a></li>
+      <li><a href="#toplanan">Toplanan bilgiler</a></li>
+      <li><a href="#izinler">İzinler</a></li>
+      <li><a href="#amac">Kullanım amaçları</a></li>
+      <li><a href="#paylasim">Paylaşım ve üçüncü taraflar</a></li>
+      <li><a href="#saklama">Saklama ve silme</a></li>
+      <li><a href="#guvenlik">Veri güvenliği</a></li>
+      <li><a href="#yedekleme">Yedekleme</a></li>
+      <li><a href="#cocuk">Çocukların gizliliği</a></li>
+      <li><a href="#haklar">Haklarınız</a></li>
+      <li><a href="#degisiklik">Politika değişiklikleri</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ol>
+  </nav>
+
+  <section id="giris">
+    <h2><span class="num">01</span> Giriş</h2>
+    <p>İlaç Hatırlatıcı ("uygulama"), ilaçlarınızı ne zaman, ne kadar ve aç/tok karnına almanız gerektiğini hatırlatmak için tasarlanmış kişisel bir sağlık asistanıdır. Bu belge, uygulamayı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklar.</p>
+    <p>Uygulamayı indirip kullanarak bu politikayı kabul etmiş olursunuz. Uygulamayı kullanmadan önce lütfen dikkatlice okuyun.</p>
+  </section>
+
+  <section id="sorumlu">
+    <h2><span class="num">02</span> Veri sorumlusu</h2>
+    <p>Uygulama, Abdulkadir Işıktan tarafından bağımsız bir geliştirici olarak geliştirilmekte ve yayınlanmaktadır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında, uygulama tarafından işlenen sınırlı veriler bakımından veri sorumlusu geliştiricinin kendisidir. İletişim bilgileri bu belgenin sonunda yer almaktadır.</p>
+  </section>
+
+  <section id="toplanan">
+    <h2><span class="num">03</span> Toplanan bilgiler</h2>
+
+    <h3>3.1 Cihazınızda sakladığınız bilgiler</h3>
+    <p>Uygulamayı kullanmak için hesap oluşturmanız gerekmez. Uygulama içinde girdiğiniz aşağıdaki bilgiler, yalnızca cihazınızdaki yerel bir veritabanında (Room) tutulur ve geliştiriciye veya üçüncü bir tarafa gönderilmez:</p>
+    <ul>
+      <li>İlaç adı, türü (tablet, kapsül, damla, şurup) ve dozu</li>
+      <li>Aç/tok karnına alınacağı bilgisi, toplam ve kalan adet</li>
+      <li>Hatırlatma saatleri, tekrar günleri ve tedavi süresi</li>
+      <li>Doz geçmişi (alındı / atlandı / ertelendi bilgisi ve zamanı)</li>
+    </ul>
+
+    <h3>3.2 Otomatik olarak toplanan kullanım verileri</h3>
+    <p>Uygulamayı daha iyi hale getirmek amacıyla <strong>Google Firebase Analytics</strong> kullanılır. Bu servis; uygulama açılışları, ekran görüntülemeleri, genel özellik kullanımı gibi olayları, cihaz modeli, işletim sistemi sürümü ve Firebase Yükleme Kimliği (Installation ID) gibi tanımlayıcılarla birlikte toplar. Bu veriler <strong>toplu ve istatistikseldir</strong>; ilaç adınız, dozunuz veya sağlık durumunuzla ilgili herhangi bir bilgi bu şekilde iletilmez.</p>
+
+    <h3>3.3 Uzaktan yapılandırma</h3>
+    <p><strong>Firebase Remote Config</strong>, uygulama özelliklerini (örneğin geçmiş görünümü penceresi veya widget gibi bazı özelliklerin açık/kapalı olması) sunucudan güncellemek için kullanılır. Bu işlem sırasında cihazınıza atanan anonim bir yükleme kimliği Google sunucularıyla iletişim kurar; kişisel veya sağlık verisi gönderilmez.</p>
+  </section>
+
+  <section id="izinler">
+    <h2><span class="num">04</span> İzinler</h2>
+    <p>Uygulama, hatırlatma özelliğinin çalışması için aşağıdaki izinleri ister. Bu izinlerin hiçbiri kişisel veri toplamak için kullanılmaz:</p>
+    <table>
+      <tr><th>İzin</th><th>Amaç</th></tr>
+      <tr><td>Bildirimler (POST_NOTIFICATIONS)</td><td>Doz zamanı geldiğinde bildirim gösterebilmek</td></tr>
+      <tr><td>Tam zamanlı alarm (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM)</td><td>Hatırlatmaların tam saatinde tetiklenmesi</td></tr>
+      <tr><td>Tam ekran bildirim (USE_FULL_SCREEN_INTENT)</td><td>Kilit ekranında hatırlatma ekranının açılması</td></tr>
+      <tr><td>Cihaz açılışı (RECEIVE_BOOT_COMPLETED)</td><td>Telefon yeniden başladığında alarmların yeniden kurulması</td></tr>
+      <tr><td>Titreşim / uyanık tutma (VIBRATE, WAKE_LOCK)</td><td>Bildirim gösterilirken cihazın kısa süreliğine uyandırılması</td></tr>
+    </table>
+    <p>Uygulama; konum, kamera, mikrofon, rehber veya galeri erişimi <strong>istemez</strong>.</p>
+  </section>
+
+  <section id="amac">
+    <h2><span class="num">05</span> Kullanım amaçları</h2>
+    <ul>
+      <li>Doğru zamanda, doğru ilaç için hatırlatma göstermek</li>
+      <li>Kalan ilaç adedini hesaplayıp size göstermek</li>
+      <li>Uygulamanın kararlılığını ve kullanılabilirliğini ölçmek (anonim analiz verisiyle)</li>
+      <li>Hangi özelliklerin sizin için etkin olacağını belirlemek (uzaktan yapılandırma ile)</li>
+    </ul>
+  </section>
+
+  <section id="paylasim">
+    <h2><span class="num">06</span> Paylaşım ve üçüncü taraflar</h2>
+    <p>İlaç ve sağlıkla ilgili verileriniz <strong>hiçbir şekilde</strong> üçüncü taraflarla paylaşılmaz, satılmaz veya reklam amacıyla kullanılmaz. Uygulamada reklam ağı bulunmamaktadır.</p>
+    <p>Uygulama, aşağıdaki alt işleyici (üçüncü taraf) hizmeti kullanır:</p>
+    <table>
+      <tr><th>Hizmet</th><th>Amaç</th><th>Politika</th></tr>
+      <tr>
+        <td>Google Firebase<br><span class="tag">Analytics · Remote Config</span></td>
+        <td>Anonim kullanım istatistiği ve uzaktan özellik yapılandırması</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="saklama">
+    <h2><span class="num">07</span> Saklama ve silme</h2>
+    <p>İlaç, doz ve hatırlatma verileriniz, siz uygulama içinden silene ya da uygulamayı cihazınızdan kaldırana kadar cihazınızda saklanır. Uygulamayı kaldırdığınızda bu veriler cihazınızdan tamamen silinir; geliştirici tarafında bir kopyası tutulmaz.</p>
+    <p>Firebase Analytics tarafından toplanan anonim kullanım verileri, Google'ın kendi saklama politikaları çerçevesinde belirli bir süre sonunda otomatik olarak silinir veya anonimleştirilir.</p>
+  </section>
+
+  <section id="guvenlik">
+    <h2><span class="num">08</span> Veri güvenliği</h2>
+    <p>Sağlık verilerinizin sunuculara hiç gönderilmemesi, en güçlü koruma yöntemidir. Cihazınızdaki veriler, işletim sisteminin uygulama korumalı alanı (sandbox) içinde tutulur ve yalnızca cihaz kilidini çözebilen kişi tarafından erişilebilir. Google Firebase ile yapılan iletişim şifreli bağlantı (HTTPS/TLS) üzerinden gerçekleşir.</p>
+  </section>
+
+  <section id="yedekleme">
+    <h2><span class="num">09</span> Yedekleme</h2>
+    <p>Android işletim sisteminin otomatik yedekleme özelliği etkinse, uygulama verileriniz (ilaç kayıtlarınız dahil) Android tarafından sizin kendi Google hesabınıza bağlı buluta yedeklenebilir. Bu yedekleme Google'ın kendi altyapısında, kendi hesabınız altında gerçekleşir; geliştirici bu yedeklere erişemez. Bu özelliği cihaz ayarlarınızdan kapatabilirsiniz.</p>
+  </section>
+
+  <section id="cocuk">
+    <h2><span class="num">10</span> Çocukların gizliliği</h2>
+    <p>Uygulama genel kullanıcı kitlesine yöneliktir ve bilerek 13 yaşın altındaki çocuklardan veri toplamaz. Uygulamanın bir çocuk tarafından kullanıldığını fark ederseniz lütfen bizimle iletişime geçin.</p>
+  </section>
+
+  <section id="haklar">
+    <h2><span class="num">11</span> Haklarınız</h2>
+    <p>KVKK madde 11 ve ilgili mevzuat kapsamında; işlenen verilerinizin olup olmadığını öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme haklarına sahipsiniz. Uygulama içi veriler zaten cihazınızda olduğundan bu haklarınızı, ilgili kaydı uygulama içinden silerek veya uygulamayı kaldırarak doğrudan kullanabilirsiniz. Firebase Analytics'te size ait tanımlayıcının silinmesini talep etmek için aşağıdaki iletişim adresinden bize ulaşabilirsiniz.</p>
+  </section>
+
+  <section id="degisiklik">
+    <h2><span class="num">12</span> Politika değişiklikleri</h2>
+    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda, uygulama içinde bir bildirim gösterilecek veya bu sayfanın üst kısmındaki yürürlük tarihi güncellenecektir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+  </section>
+
+  <section id="iletisim">
+    <h2><span class="num">13</span> İletişim</h2>
+    <p>Gizlilik politikası veya kişisel verilerinizle ilgili sorularınız için bize ulaşabilirsiniz:</p>
+    <p>📧 <a href="mailto:kadirisiktan@gmail.com">kadirisiktan@gmail.com</a></p>
+  </section>
+
+  <footer>
+    İlaç Hatırlatıcı (<code>tr.com.drugreminder</code>) · Bu belge Google Play üzerinde yayınlanan gizlilik politikası bağlantısı olarak kullanılabilir.
+  </footer>
+
+</div>
+</body>
+</html>
