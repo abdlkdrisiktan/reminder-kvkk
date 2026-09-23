@@ -199,17 +199,17 @@
 <div class="page">
 
   <header class="hero">
-    <div class="mark">⏰</div>
+    <div class="mark">🔔</div>
     <div class="titles">
       <h1>Hatırlatıcı</h1>
-      <p>Gizlilik Politikası · Yürürlük tarihi: 22 Eylül 2026</p>
+      <p>Gizlilik Politikası · Yürürlük tarihi: 23 Eylül 2026</p>
     </div>
   </header>
 
   <div class="summary">
     <h2>Özet</h2>
     <ul>
-      <li>Girdiğiniz hatırlatma bilgileri yalnızca <strong>cihazınızda</strong> saklanır; bu bilgiler hiçbir sunucuya gönderilmez.</li>
+      <li>Hatırlatma bilgileriniz yalnızca <strong>cihazınızda</strong> saklanır; hiçbir sunucuya gönderilmez.</li>
       <li>Uygulamayı iyileştirmek için Google Firebase üzerinden <strong>anonim, toplu kullanım istatistiği</strong> toplanır (Firebase Analytics).</li>
       <li>Hesap oluşturma, giriş yapma veya reklam gösterimi yoktur.</li>
       <li>İstediğiniz zaman uygulamayı kaldırarak tüm yerel verileri silebilirsiniz.</li>
@@ -237,7 +237,7 @@
 
   <section id="giris">
     <h2><span class="num">01</span> Giriş</h2>
-    <p>Hatırlatıcı ("uygulama"), belirlediğiniz zamanlarda size hatırlatma bildirimleri göstermek için tasarlanmış kişisel bir hatırlatma asistanıdır. Bu belge, uygulamayı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklar.</p>
+    <p>Hatırlatıcı ("uygulama"), belirlediğiniz zamanlarda size hatırlatma göndermek için tasarlanmış kişisel bir hatırlatma uygulamasıdır. Bu belge, uygulamayı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklar.</p>
     <p>Uygulamayı indirip kullanarak bu politikayı kabul etmiş olursunuz. Uygulamayı kullanmadan önce lütfen dikkatlice okuyun.</p>
   </section>
 
@@ -252,14 +252,14 @@
     <h3>3.1 Cihazınızda sakladığınız bilgiler</h3>
     <p>Uygulamayı kullanmak için hesap oluşturmanız gerekmez. Uygulama içinde girdiğiniz aşağıdaki bilgiler, yalnızca cihazınızdaki yerel bir veritabanında (Room) tutulur ve geliştiriciye veya üçüncü bir tarafa gönderilmez:</p>
     <ul>
-      <li>Hatırlatma başlığı, kategorisi ve notu</li>
-      <li>Toplam ve kalan adet bilgisi</li>
+      <li>Hatırlatma başlığı, türü ve notu</li>
+      <li>Toplam ve kalan tekrar sayısı</li>
       <li>Hatırlatma saatleri, tekrar günleri ve süresi</li>
-      <li>Hatırlatma geçmişi (yapıldı / atlandı / ertelendi bilgisi ve zamanı)</li>
+      <li>Hatırlatma geçmişi (alındı / atlandı / ertelendi bilgisi ve zamanı)</li>
     </ul>
 
     <h3>3.2 Otomatik olarak toplanan kullanım verileri</h3>
-    <p>Uygulamayı daha iyi hale getirmek amacıyla <strong>Google Firebase Analytics</strong> kullanılır. Bu servis; uygulama açılışları, ekran görüntülemeleri, genel özellik kullanımı gibi olayları, cihaz modeli, işletim sistemi sürümü ve Firebase Yükleme Kimliği (Installation ID) gibi tanımlayıcılarla birlikte toplar. Bu veriler <strong>toplu ve istatistikseldir</strong>; girdiğiniz hatırlatma içerikleriyle ilgili herhangi bir bilgi bu şekilde iletilmez.</p>
+    <p>Uygulamayı daha iyi hale getirmek amacıyla <strong>Google Firebase Analytics</strong> kullanılır. Bu servis; uygulama açılışları, ekran görüntülemeleri, genel özellik kullanımı gibi olayları, cihaz modeli, işletim sistemi sürümü ve Firebase Yükleme Kimliği (Installation ID) gibi tanımlayıcılarla birlikte toplar. Bu veriler <strong>toplu ve istatistikseldir</strong>; hatırlatma içerikleriniz veya kişisel bilgilerinizle ilgili herhangi bir şey bu şekilde iletilmez.</p>
 
     <h3>3.3 Uzaktan yapılandırma</h3>
     <p><strong>Firebase Remote Config</strong>, uygulama özelliklerini (örneğin geçmiş görünümü penceresi veya widget gibi bazı özelliklerin açık/kapalı olması) sunucudan güncellemek için kullanılır. Bu işlem sırasında cihazınıza atanan anonim bir yükleme kimliği Google sunucularıyla iletişim kurar; kişisel veri gönderilmez.</p>
@@ -271,7 +271,7 @@
     <table>
       <tr><th>İzin</th><th>Amaç</th></tr>
       <tr><td>Bildirimler (POST_NOTIFICATIONS)</td><td>Hatırlatma zamanı geldiğinde bildirim gösterebilmek</td></tr>
-      <tr><td>Tam zamanlı alarm (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM)</td><td>Hatırlatmaların tam saatinde tetiklenmesi</td></tr>
+      <tr><td>Tam zamanlı alarm (SCHEDULE_EXACT_ALARM)</td><td>Hatırlatmaların tam saatinde tetiklenmesi</td></tr>
       <tr><td>Tam ekran bildirim (USE_FULL_SCREEN_INTENT)</td><td>Kilit ekranında hatırlatma ekranının açılması</td></tr>
       <tr><td>Cihaz açılışı (RECEIVE_BOOT_COMPLETED)</td><td>Telefon yeniden başladığında alarmların yeniden kurulması</td></tr>
       <tr><td>Titreşim / uyanık tutma (VIBRATE, WAKE_LOCK)</td><td>Bildirim gösterilirken cihazın kısa süreliğine uyandırılması</td></tr>
@@ -283,7 +283,7 @@
     <h2><span class="num">05</span> Kullanım amaçları</h2>
     <ul>
       <li>Doğru zamanda, doğru hatırlatmayı göstermek</li>
-      <li>Kalan adedi hesaplayıp size göstermek</li>
+      <li>Kalan tekrar sayısını hesaplayıp size göstermek</li>
       <li>Uygulamanın kararlılığını ve kullanılabilirliğini ölçmek (anonim analiz verisiyle)</li>
       <li>Hangi özelliklerin sizin için etkin olacağını belirlemek (uzaktan yapılandırma ile)</li>
     </ul>
