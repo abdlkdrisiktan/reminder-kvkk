@@ -17,6 +17,9 @@
     --line:#DCE7E1;
     --card:#FFFFFF;
     --bg:var(--cream);
+    --hero-ink:#FBF6EE;
+    --hero-sub:#FAEEDA;
+    --tag-ink:var(--teal-deep);
   }
   @media (prefers-color-scheme: dark){
     :root{
@@ -31,6 +34,7 @@
       --line:#274038;
       --card:#172622;
       --bg:#0E1815;
+      --tag-ink:var(--amber);
     }
   }
 
@@ -63,7 +67,7 @@
     padding: 22px 24px;
     background: var(--teal-deep);
     border-radius: 20px;
-    color: var(--cream);
+    color: var(--hero-ink);
     margin-bottom: 22px;
   }
   header.hero .mark{
@@ -75,13 +79,13 @@
   }
   header.hero .titles h1{
     font-size: 1.4rem;
-    color: var(--cream);
+    color: var(--hero-ink);
     margin: 0 0 4px;
   }
   header.hero .titles p{
     margin:0;
     font-size: 0.85rem;
-    color: var(--amber-soft);
+    color: var(--hero-sub);
     opacity: 0.9;
   }
 
@@ -175,7 +179,7 @@
   .tag{
     display:inline-block;
     background: var(--amber-soft);
-    color: var(--teal-deep);
+    color: var(--tag-ink);
     border-radius: 999px;
     padding: 2px 10px;
     font-size: 0.76rem;
