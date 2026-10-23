@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="en" href="en/">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,23 +34,16 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">● Verilerin cihazında kalır</span>
-      <h1>Hiçbir hatırlatmayı <em>kaçırma.</em></h1>
-      <p class="lead">Hatırlatıcı; saatinde çalan alarmlar, stok uyarıları ve günlük ilerleme takibiyle rutinlerini sade bir düzene sokar. Hesap yok, reklam yok, karmaşa yok.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=tr.com.hatirlatici" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18c0 .5.2.9.6 1.2L13.4 12 3.6 1.8Zm11.2 11.6 2.6 2.7-11.3 6.4 8.7-9.1Zm3.8-4.1 2.8 1.6c.9.5.9 1.8 0 2.3l-2.8 1.6-2.9-2.8 2.9-2.7ZM6.1 1.5l11.3 6.4-2.6 2.7-8.7-9.1Z"/></svg>
-        <span><small>Hemen indir</small>Google Play</span>
-      </a>
-      <div class="stats">
-        <div><b>%100</b><span>cihazda saklanan veri</span></div>
-        <div><b>0</b><span>hesap ve reklam</span></div>
-        <div><b>Tam saatinde</b><span>kilit ekranında bile</span></div>
-      </div>
-    </div>
-
-    <div class="phone" aria-hidden="true">
+  <div class="hero-copy" data-rise>
+    <h1>Hiçbir hatırlatmayı kaçırma.</h1>
+    <p class="lead">Hatırlatıcı; saatinde çalan alarmlar, stok uyarıları ve günlük ilerleme takibiyle rutinlerini sade bir düzene sokar. Hesap yok, reklam yok. Verilerin cihazında kalır.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=tr.com.hatirlatici" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18c0 .5.2.9.6 1.2L13.4 12 3.6 1.8Zm11.2 11.6 2.6 2.7-11.3 6.4 8.7-9.1Zm3.8-4.1 2.8 1.6c.9.5.9 1.8 0 2.3l-2.8 1.6-2.9-2.8 2.9-2.7ZM6.1 1.5l11.3 6.4-2.6 2.7-8.7-9.1Z"/></svg>
+      <span><small>Hemen indir</small>Google Play</span>
+    </a>
+  </div>
+  <div class="hero-stage" data-rise>
+    <div class="phone" data-ui aria-hidden="true">
       <div class="screen">
         <div class="top"><b>Bugün</b><span>21 Ekim, Salı</span></div>
         <div class="ring-card">
@@ -61,70 +54,62 @@
           </svg>
           <div><b>Harika gidiyorsun</b><span>2 / 3 hatırlatıcı tamamlandı</span></div>
         </div>
-        <div class="dose"><span class="t">08:30</span><span class="n">Vitamin D<small>1 adet · Tok karnına</small></span><span class="pill ok">✓ Alındı</span></div>
-        <div class="dose"><span class="t">13:00</span><span class="n">Omega 3<small>1 adet · Fark etmez</small></span><span class="pill ok">✓ Alındı</span></div>
+        <div class="dose"><span class="t">08:30</span><span class="n">Vitamin D<small>1 adet · Tok karnına</small></span><span class="pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alındı</span></div>
+        <div class="dose"><span class="t">13:00</span><span class="n">Omega 3<small>1 adet · Fark etmez</small></span><span class="pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alındı</span></div>
         <div class="dose"><span class="t">21:00</span><span class="n">Göz damlası<small>2 damla · Fark etmez</small></span><span class="pill wait">Aldım</span></div>
-        <div class="stock">⚠ Omega 3 azalıyor — 4 adet kaldı</div>
+        <div class="stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>Omega 3 azalıyor, 4 adet kaldı</div>
       </div>
     </div>
   </div>
 </header>
 
 <section class="block" id="ozellikler">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker">Özellikler</div>
+  <div class="wrap split">
+    <div class="side" data-rise>
       <h2>Küçük ama eksiksiz</h2>
-      <p>İhtiyacın olan her şey var, fazlası yok. Uygulamayı açtığında yapman gerekeni hemen görürsün.</p>
+      <p class="intro">İhtiyacın olan her şey var, fazlası yok. Uygulamayı açtığında yapman gerekeni hemen görürsün.</p>
     </div>
-    <div class="grid">
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M5 3 2 6M22 6l-3-3"/></svg></div>
+    <ul class="feature-list" data-rise>
+      <li>
         <h3>Tam saatinde alarm</h3>
         <p>Hatırlatmalar dakikası dakikasına çalar. Telefon kilitliyken bile tam ekran açılır, yeniden başlatmadan sonra kendiliğinden kurulur.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      </li>
+      <li>
         <h3>Tek dokunuşla işaretle</h3>
         <p>Bildirimden "Aldım" ya da "Ertele" de, gerisini uygulama halletsin. Yanlışlıkla mı bastın? Geri al.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h10"/></svg></div>
+      </li>
+      <li>
         <h3>Esnek planlama</h3>
         <p>Günde birden fazla saat, belirli günler, süre ve öğün ilişkisi (aç / tok karnına). Her rutine uyar.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div>
+      </li>
+      <li>
         <h3>Stok takibi</h3>
         <p>Kalan adet her alımda otomatik düşer. Azalmaya başladığında ya da bittiğinde seni önceden uyarır.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+      </li>
+      <li>
         <h3>Geçmiş ve uyum oranı</h3>
         <p>Son 30 günde neyi aldın, neyi atladın, neyi erteledin; hepsi tek ekranda, uyum oranınla birlikte.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/></svg></div>
+      </li>
+      <li>
         <h3>Ana ekran widget'ı</h3>
         <p>Uygulamayı açmadan günün planını ve ilerlemeni ana ekranda gör.</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <section class="block alt" id="nasil-calisir">
   <div class="wrap steps">
-    <div>
-      <div class="head" style="text-align:left;margin:0"><div class="kicker">3 adımda başla</div></div>
+    <div data-rise>
       <h2>Kur, unut, hatırlatılsın.</h2>
-      <p style="color:var(--muted);margin:0">Kayıt formu yok, öğrenme süreci yok. Bir dakikada ilk hatırlatıcın hazır.</p>
+      <p class="intro">Kayıt formu yok, öğrenme süreci yok. Bir dakikada ilk hatırlatıcın hazır.</p>
       <ol>
-        <li><div><b>Hatırlatıcını ekle</b><span>Adını, türünü ve elindeki adedi gir.</span></div></li>
-        <li><div><b>Saatleri belirle</b><span>Günde kaç kez, hangi günler, kaç gün boyunca; hepsini sen seç.</span></div></li>
-        <li><div><b>Gerisini bize bırak</b><span>Zamanı gelince bildirim çalar; "Aldım" de, ilerlemen ve stoğun güncellensin.</span></div></li>
+        <li><b>Hatırlatıcını ekle</b>Adını, türünü ve elindeki adedi gir.</li>
+        <li><b>Saatleri belirle</b>Günde kaç kez, hangi günler, kaç gün boyunca; hepsini sen seç.</li>
+        <li><b>Gerisini bize bırak</b>Zamanı gelince bildirim çalar; "Aldım" de, ilerlemen ve stoğun güncellensin.</li>
       </ol>
     </div>
-    <div class="privacy-box">
+    <div class="privacy-box" data-rise>
       <h3>Gizlilik varsayılan olarak açık</h3>
       <p>Hatırlatıcı, verini toplamak için değil, hatırlatmak için var.</p>
       <ul class="checks">
@@ -133,18 +118,18 @@
         <li>Uygulamada reklam ağı yoktur; verin satılmaz, paylaşılmaz.</li>
         <li>Konum, kamera, mikrofon ya da rehber izni istenmez.</li>
       </ul>
-      <p style="margin:20px 0 0"><a href="gizlilik-politikasi.html">Gizlilik politikasının tamamını oku →</a></p>
+      <p class="more"><a href="gizlilik-politikasi.html">Gizlilik politikasının tamamını oku →</a></p>
     </div>
   </div>
 </section>
 
 <section class="block" id="sss">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker">Sıkça sorulanlar</div>
+  <div class="wrap split">
+    <div class="side" data-rise>
       <h2>Aklına takılanlar</h2>
+      <p class="intro">Cevabını bulamadığın bir soru varsa <a href="mailto:kadirisiktan@gmail.com">bize yaz</a>.</p>
     </div>
-    <div class="faq">
+    <div class="faq" data-rise>
       <details open>
         <summary>İnternet bağlantısı gerekiyor mu?</summary>
         <p>Hayır. Hatırlatmalar tamamen cihazında kurulur ve çalışır. İnternet yokken de alarmların zamanında çalar.</p>
@@ -170,7 +155,7 @@
 </section>
 
 <section class="cta" id="indir">
-  <div class="wrap">
+  <div class="wrap" data-rise>
     <img src="logo.svg" alt="Hatırlatıcı logosu">
     <h2>Rutinlerin artık seni hatırlasın.</h2>
     <p>Hatırlatıcı'yı ücretsiz indir, ilk hatırlatıcını bir dakikada kur.</p>
@@ -212,5 +197,20 @@
   </div>
 </footer>
 
+<script>
+  // Mark section parts as they enter so they rise into place once; skipped for reduced motion.
+  (() => {
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.documentElement.classList.add("rise-ready");
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("risen");
+        io.unobserve(entry.target);
+      }
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("[data-rise]").forEach((el) => io.observe(el));
+  })();
+</script>
 </body>
 </html>

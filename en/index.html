@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="en" href="./">
 <link rel="icon" href="../logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -34,23 +34,16 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">● Your data stays on your device</span>
-      <h1>Never miss a <em>reminder.</em></h1>
-      <p class="lead">Hatırlatıcı brings order to your routines with alarms that ring on time, low-stock alerts and daily progress tracking. No account, no ads, no clutter.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=tr.com.hatirlatici" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18c0 .5.2.9.6 1.2L13.4 12 3.6 1.8Zm11.2 11.6 2.6 2.7-11.3 6.4 8.7-9.1Zm3.8-4.1 2.8 1.6c.9.5.9 1.8 0 2.3l-2.8 1.6-2.9-2.8 2.9-2.7ZM6.1 1.5l11.3 6.4-2.6 2.7-8.7-9.1Z"/></svg>
-        <span><small>Get it on</small>Google Play</span>
-      </a>
-      <div class="stats">
-        <div><b>100%</b><span>of your reminders stored on device</span></div>
-        <div><b>0</b><span>accounts and ads</span></div>
-        <div><b>On time</b><span>even on the lock screen</span></div>
-      </div>
-    </div>
-
-    <div class="phone" aria-hidden="true">
+  <div class="hero-copy" data-rise>
+    <h1>Never miss a reminder.</h1>
+    <p class="lead">Hatırlatıcı brings order to your routines with alarms that ring on time, low-stock alerts and daily progress tracking. No account, no ads. Your data stays on your device.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=tr.com.hatirlatici" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18c0 .5.2.9.6 1.2L13.4 12 3.6 1.8Zm11.2 11.6 2.6 2.7-11.3 6.4 8.7-9.1Zm3.8-4.1 2.8 1.6c.9.5.9 1.8 0 2.3l-2.8 1.6-2.9-2.8 2.9-2.7ZM6.1 1.5l11.3 6.4-2.6 2.7-8.7-9.1Z"/></svg>
+      <span><small>Get it on</small>Google Play</span>
+    </a>
+  </div>
+  <div class="hero-stage" data-rise>
+    <div class="phone" data-ui aria-hidden="true">
       <div class="screen">
         <div class="top"><b>Today</b><span>Tue, Oct 21</span></div>
         <div class="ring-card">
@@ -61,70 +54,62 @@
           </svg>
           <div><b>You're doing great</b><span>2 / 3 reminders done</span></div>
         </div>
-        <div class="dose"><span class="t">08:30</span><span class="n">Vitamin D<small>1 pc · After meal</small></span><span class="pill ok">✓ Taken</span></div>
-        <div class="dose"><span class="t">13:00</span><span class="n">Omega 3<small>1 pc · Any time</small></span><span class="pill ok">✓ Taken</span></div>
+        <div class="dose"><span class="t">08:30</span><span class="n">Vitamin D<small>1 pc · After meal</small></span><span class="pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Taken</span></div>
+        <div class="dose"><span class="t">13:00</span><span class="n">Omega 3<small>1 pc · Any time</small></span><span class="pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Taken</span></div>
         <div class="dose"><span class="t">21:00</span><span class="n">Eye drops<small>2 drops · Any time</small></span><span class="pill wait">Done</span></div>
-        <div class="stock">⚠ Omega 3 is running low — 4 left</div>
+        <div class="stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>Omega 3 is running low, 4 left</div>
       </div>
     </div>
   </div>
 </header>
 
 <section class="block" id="features">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker">Features</div>
+  <div class="wrap split">
+    <div class="side" data-rise>
       <h2>Small, but complete</h2>
-      <p>Everything you need and nothing you don't. Open the app and you instantly see what to do next.</p>
+      <p class="intro">Everything you need and nothing you don't. Open the app and you instantly see what to do next.</p>
     </div>
-    <div class="grid">
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M5 3 2 6M22 6l-3-3"/></svg></div>
+    <ul class="feature-list" data-rise>
+      <li>
         <h3>Right-on-time alarms</h3>
         <p>Reminders ring to the minute. They open full screen even when your phone is locked, and are rescheduled automatically after a restart.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      </li>
+      <li>
         <h3>One-tap check-off</h3>
         <p>Tap "Done" or "Snooze" right from the notification and let the app handle the rest. Tapped by mistake? Undo it.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h10"/></svg></div>
+      </li>
+      <li>
         <h3>Flexible scheduling</h3>
         <p>Multiple times a day, specific weekdays, a set duration and meal timing (before / after meals). It fits any routine.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div>
+      </li>
+      <li>
         <h3>Stock tracking</h3>
         <p>The remaining count goes down automatically each time. You get a heads-up when it runs low or runs out.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+      </li>
+      <li>
         <h3>History and adherence</h3>
         <p>See what you completed, skipped or snoozed over the last 30 days on one screen, along with your adherence rate.</p>
-      </div>
-      <div class="card">
-        <div class="icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/></svg></div>
+      </li>
+      <li>
         <h3>Home screen widget</h3>
         <p>See today's plan and your progress on the home screen without opening the app.</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <section class="block alt" id="how-it-works">
   <div class="wrap steps">
-    <div>
-      <div class="head" style="text-align:left;margin:0"><div class="kicker">Get started in 3 steps</div></div>
+    <div data-rise>
       <h2>Set it, forget it, get reminded.</h2>
-      <p style="color:var(--muted);margin:0">No sign-up form, no learning curve. Your first reminder is ready in a minute.</p>
+      <p class="intro">No sign-up form, no learning curve. Your first reminder is ready in a minute.</p>
       <ol>
-        <li><div><b>Add a reminder</b><span>Enter its name, type and how many you have.</span></div></li>
-        <li><div><b>Pick the times</b><span>How often a day, which days and for how long — all up to you.</span></div></li>
-        <li><div><b>Leave the rest to us</b><span>A notification rings when it's time; tap "Done" and your progress and stock update.</span></div></li>
+        <li><b>Add a reminder</b>Enter its name, type and how many you have.</li>
+        <li><b>Pick the times</b>How often a day, which days and for how long — all up to you.</li>
+        <li><b>Leave the rest to us</b>A notification rings when it's time; tap "Done" and your progress and stock update.</li>
       </ol>
     </div>
-    <div class="privacy-box">
+    <div class="privacy-box" data-rise>
       <h3>Private by default</h3>
       <p>Hatırlatıcı is here to remind you, not to collect your data.</p>
       <ul class="checks">
@@ -133,18 +118,18 @@
         <li>No ad networks; your data is never sold or shared.</li>
         <li>No location, camera, microphone or contacts permission.</li>
       </ul>
-      <p style="margin:20px 0 0"><a href="privacy-policy.html">Read the full privacy policy →</a></p>
+      <p class="more"><a href="privacy-policy.html">Read the full privacy policy →</a></p>
     </div>
   </div>
 </section>
 
 <section class="block" id="faq">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker">FAQ</div>
+  <div class="wrap split">
+    <div class="side" data-rise>
       <h2>Common questions</h2>
+      <p class="intro">Didn't find your answer? <a href="mailto:kadirisiktan@gmail.com">Email us</a>.</p>
     </div>
-    <div class="faq">
+    <div class="faq" data-rise>
       <details open>
         <summary>Do I need an internet connection?</summary>
         <p>No. Reminders are scheduled and run entirely on your device. Your alarms ring on time even when you're offline.</p>
@@ -170,7 +155,7 @@
 </section>
 
 <section class="cta" id="download">
-  <div class="wrap">
+  <div class="wrap" data-rise>
     <img src="../logo.svg" alt="Hatırlatıcı logo">
     <h2>Let your routines remember you.</h2>
     <p>Download Hatırlatıcı for free and set up your first reminder in a minute.</p>
@@ -212,5 +197,20 @@
   </div>
 </footer>
 
+<script>
+  // Mark section parts as they enter so they rise into place once; skipped for reduced motion.
+  (() => {
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.documentElement.classList.add("rise-ready");
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("risen");
+        io.unobserve(entry.target);
+      }
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("[data-rise]").forEach((el) => io.observe(el));
+  })();
+</script>
 </body>
 </html>
