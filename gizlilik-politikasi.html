@@ -34,7 +34,7 @@
   <div class="doc">
     <a class="back" href="./">← Ana sayfaya dön</a>
     <h1>Gizlilik Politikası</h1>
-    <p>Yürürlük tarihi: 23 Eylül 2026</p>
+    <p>Yürürlük tarihi: 27 Ekim 2026</p>
   </div>
 </header>
 
@@ -45,7 +45,8 @@
     <ul>
       <li>Hatırlatma bilgileriniz yalnızca <strong>cihazınızda</strong> saklanır; hiçbir sunucuya gönderilmez.</li>
       <li>Uygulamayı iyileştirmek için Google Firebase üzerinden <strong>anonim, toplu kullanım istatistiği</strong> toplanır (Firebase Analytics).</li>
-      <li>Hesap oluşturma, giriş yapma veya reklam gösterimi yoktur.</li>
+      <li>Hesap oluşturma veya giriş yapma yoktur.</li>
+      <li>Uygulamanın ücretsiz kalabilmesi için <strong>Google AdMob</strong> üzerinden reklam gösterilir. AEA, Birleşik Krallık ve İsviçre'deki kullanıcılardan kişiselleştirilmiş reklam için önceden izin istenir; bu tercihi uygulama içinden istediğiniz zaman değiştirebilirsiniz.</li>
       <li>İstediğiniz zaman uygulamayı kaldırarak tüm yerel verileri silebilirsiniz.</li>
     </ul>
   </div>
@@ -95,13 +96,18 @@
     <h3>3.2 Otomatik olarak toplanan kullanım verileri</h3>
     <p>Uygulamayı daha iyi hale getirmek amacıyla <strong>Google Firebase Analytics</strong> kullanılır. Bu servis; uygulama açılışları, ekran görüntülemeleri, genel özellik kullanımı gibi olayları, cihaz modeli, işletim sistemi sürümü ve Firebase Yükleme Kimliği (Installation ID) gibi tanımlayıcılarla birlikte toplar. Bu veriler <strong>toplu ve istatistikseldir</strong>; hatırlatma içerikleriniz veya kişisel bilgilerinizle ilgili herhangi bir şey bu şekilde iletilmez.</p>
 
-    <h3>3.3 Uzaktan yapılandırma</h3>
+    <h3>3.3 Reklamlar (Google AdMob)</h3>
+    <p>Uygulamada <strong>Google AdMob</strong> aracılığıyla banner ve ödüllü reklamlar gösterilir. Reklamların sunulması, ölçülmesi ve sahteciliğin önlenmesi için Google; <strong>reklam kimliği</strong> (Android Advertising ID), IP adresi, cihaz modeli, işletim sistemi sürümü, dil ayarı, yaklaşık konum (IP'den türetilen) ve reklam etkileşimleri (gösterim, tıklama) gibi verileri toplayabilir ve işleyebilir. Hatırlatma içerikleriniz reklam amacıyla kullanılmaz ve Google ile paylaşılmaz.</p>
+    <p>AEA, Birleşik Krallık ve İsviçre'deki kullanıcılardan, Google'ın Kullanıcı Mesajlaşma Platformu (UMP) aracılığıyla kişiselleştirilmiş reklamlar için izin istenir. İzin vermezseniz yalnızca kişiselleştirilmemiş (sınırlı) reklamlar gösterilir. Tercihinizi uygulama ayarlarındaki gizlilik seçeneklerinden değiştirebilirsiniz. Reklam kimliğinizi Android ayarlarından (Gizlilik › Reklamlar) sıfırlayabilir veya silebilirsiniz.</p>
+    <p>Google'ın bu verileri nasıl kullandığı hakkında: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></p>
+
+    <h3>3.4 Uzaktan yapılandırma</h3>
     <p><strong>Firebase Remote Config</strong>, uygulama özelliklerini (örneğin geçmiş görünümü penceresi veya widget gibi bazı özelliklerin açık/kapalı olması) sunucudan güncellemek için kullanılır. Bu işlem sırasında cihazınıza atanan anonim bir yükleme kimliği Google sunucularıyla iletişim kurar; kişisel veri gönderilmez.</p>
   </section>
 
   <section id="izinler">
     <h2>4. İzinler</h2>
-    <p>Uygulama, hatırlatma özelliğinin çalışması için aşağıdaki izinleri ister. Bu izinlerin hiçbiri kişisel veri toplamak için kullanılmaz:</p>
+    <p>Uygulama aşağıdaki izinleri ister:</p>
     <table>
       <tr><th>İzin</th><th>Amaç</th></tr>
       <tr><td>Bildirimler (POST_NOTIFICATIONS)</td><td>Hatırlatma zamanı geldiğinde bildirim gösterebilmek</td></tr>
@@ -109,6 +115,8 @@
       <tr><td>Tam ekran bildirim (USE_FULL_SCREEN_INTENT)</td><td>Kilit ekranında hatırlatma ekranının açılması</td></tr>
       <tr><td>Cihaz açılışı (RECEIVE_BOOT_COMPLETED)</td><td>Telefon yeniden başladığında alarmların yeniden kurulması</td></tr>
       <tr><td>Titreşim / uyanık tutma (VIBRATE, WAKE_LOCK)</td><td>Bildirim gösterilirken cihazın kısa süreliğine uyandırılması</td></tr>
+      <tr><td>İnternet (INTERNET, ACCESS_NETWORK_STATE)</td><td>Reklamların yüklenmesi, analiz ve uzaktan yapılandırma</td></tr>
+      <tr><td>Reklam kimliği (AD_ID)</td><td>Reklamların sunulması ve ölçülmesi (Google AdMob)</td></tr>
     </table>
     <p>Uygulama; konum, kamera, mikrofon, rehber veya galeri erişimi <strong>istemez</strong>.</p>
   </section>
@@ -120,13 +128,14 @@
       <li>Kalan tekrar sayısını hesaplayıp size göstermek</li>
       <li>Uygulamanın kararlılığını ve kullanılabilirliğini ölçmek (anonim analiz verisiyle)</li>
       <li>Hangi özelliklerin sizin için etkin olacağını belirlemek (uzaktan yapılandırma ile)</li>
+      <li>Uygulamanın ücretsiz sunulabilmesi için reklam göstermek ve reklam performansını ölçmek (Google AdMob)</li>
     </ul>
   </section>
 
   <section id="paylasim">
     <h2>6. Paylaşım ve üçüncü taraflar</h2>
-    <p>Hatırlatma verileriniz <strong>hiçbir şekilde</strong> üçüncü taraflarla paylaşılmaz, satılmaz veya reklam amacıyla kullanılmaz. Uygulamada reklam ağı bulunmamaktadır.</p>
-    <p>Uygulama, aşağıdaki alt işleyici (üçüncü taraf) hizmeti kullanır:</p>
+    <p>Hatırlatma verileriniz <strong>hiçbir şekilde</strong> üçüncü taraflarla paylaşılmaz, satılmaz veya reklam amacıyla kullanılmaz.</p>
+    <p>Uygulama, aşağıdaki üçüncü taraf hizmetleri kullanır:</p>
     <table>
       <tr><th>Hizmet</th><th>Amaç</th><th>Politika</th></tr>
       <tr>
@@ -134,18 +143,23 @@
         <td>Anonim kullanım istatistiği ve uzaktan özellik yapılandırması</td>
         <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
       </tr>
+      <tr>
+        <td>Google AdMob<br><span class="tag">Reklam · UMP</span></td>
+        <td>Reklam gösterimi, ölçümü ve kullanıcı izni yönetimi</td>
+        <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></td>
+      </tr>
     </table>
   </section>
 
   <section id="saklama">
     <h2>7. Saklama ve silme</h2>
     <p>Hatırlatma verileriniz, siz uygulama içinden silene ya da uygulamayı cihazınızdan kaldırana kadar cihazınızda saklanır. Uygulamayı kaldırdığınızda bu veriler cihazınızdan tamamen silinir; geliştirici tarafında bir kopyası tutulmaz.</p>
-    <p>Firebase Analytics tarafından toplanan anonim kullanım verileri, Google'ın kendi saklama politikaları çerçevesinde belirli bir süre sonunda otomatik olarak silinir veya anonimleştirilir.</p>
+    <p>Firebase Analytics ve Google AdMob tarafından toplanan veriler, Google'ın kendi saklama politikaları çerçevesinde belirli bir süre sonunda otomatik olarak silinir veya anonimleştirilir.</p>
   </section>
 
   <section id="guvenlik">
     <h2>8. Veri güvenliği</h2>
-    <p>Verilerinizin sunuculara hiç gönderilmemesi, en güçlü koruma yöntemidir. Cihazınızdaki veriler, işletim sisteminin uygulama korumalı alanı (sandbox) içinde tutulur ve yalnızca cihaz kilidini çözebilen kişi tarafından erişilebilir. Google Firebase ile yapılan iletişim şifreli bağlantı (HTTPS/TLS) üzerinden gerçekleşir.</p>
+    <p>Hatırlatma verilerinizin sunuculara hiç gönderilmemesi, en güçlü koruma yöntemidir. Cihazınızdaki veriler, işletim sisteminin uygulama korumalı alanı (sandbox) içinde tutulur ve yalnızca cihaz kilidini çözebilen kişi tarafından erişilebilir. Google Firebase ve Google AdMob ile yapılan iletişim şifreli bağlantı (HTTPS/TLS) üzerinden gerçekleşir.</p>
   </section>
 
   <section id="yedekleme">
@@ -160,7 +174,7 @@
 
   <section id="haklar">
     <h2>11. Haklarınız</h2>
-    <p>KVKK madde 11 ve ilgili mevzuat kapsamında; işlenen verilerinizin olup olmadığını öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme haklarına sahipsiniz. Uygulama içi veriler zaten cihazınızda olduğundan bu haklarınızı, ilgili kaydı uygulama içinden silerek veya uygulamayı kaldırarak doğrudan kullanabilirsiniz. Firebase Analytics'te size ait tanımlayıcının silinmesini talep etmek için aşağıdaki iletişim adresinden bize ulaşabilirsiniz.</p>
+    <p>KVKK madde 11 ve ilgili mevzuat kapsamında; işlenen verilerinizin olup olmadığını öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme haklarına sahipsiniz. Uygulama içi veriler zaten cihazınızda olduğundan bu haklarınızı, ilgili kaydı uygulama içinden silerek veya uygulamayı kaldırarak doğrudan kullanabilirsiniz. Firebase Analytics'te size ait tanımlayıcının silinmesini talep etmek için aşağıdaki iletişim adresinden bize ulaşabilirsiniz. Reklam kişiselleştirme izninizi uygulama içindeki gizlilik seçeneklerinden geri alabilir, reklam kimliğinizi Android ayarlarından sıfırlayabilirsiniz.</p>
   </section>
 
   <section id="degisiklik">

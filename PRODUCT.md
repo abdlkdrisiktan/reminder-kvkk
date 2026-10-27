@@ -24,7 +24,7 @@ The website's job: explain what the app does, send visitors to Google Play, and 
 
 ## Positioning
 
-Reminder data stays on the device: no account, no sign-up, no ads, no ad networks, works offline. The only data leaving the phone is anonymous, aggregated Firebase Analytics and Remote Config traffic, and every privacy claim must stay consistent with that.
+Reminder data stays on the device: no account, no sign-up, works offline. The app shows Google AdMob ads (banner + rewarded, UMP consent for EEA/UK/CH), so data leaving the phone is Firebase Analytics, Remote Config and AdMob traffic (incl. advertising ID). Reminder content never leaves the device, and every privacy claim must stay consistent with that.
 
 ## Operating Context
 
