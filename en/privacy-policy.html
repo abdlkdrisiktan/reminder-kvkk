@@ -34,7 +34,7 @@
   <div class="doc">
     <a class="back" href="./">← Back to home</a>
     <h1>Privacy Policy</h1>
-    <p>Effective date: September 23, 2026</p>
+    <p>Effective date: October 27, 2026</p>
   </div>
 </header>
 
@@ -45,7 +45,8 @@
     <ul>
       <li>Your reminder data is stored <strong>only on your device</strong> and is never sent to any server.</li>
       <li><strong>Anonymous, aggregated usage statistics</strong> are collected via Google Firebase (Firebase Analytics) to improve the app.</li>
-      <li>There is no account creation, sign-in or advertising.</li>
+      <li>There is no account creation or sign-in.</li>
+      <li>To keep the app free, ads are shown via <strong>Google AdMob</strong>. Users in the EEA, UK and Switzerland are asked for consent to personalized ads first, and can change this choice in the app at any time.</li>
       <li>You can delete all local data at any time by uninstalling the app.</li>
     </ul>
   </div>
@@ -95,13 +96,18 @@
     <h3>3.2 Automatically collected usage data</h3>
     <p><strong>Google Firebase Analytics</strong> is used to improve the app. This service collects events such as app opens, screen views and general feature usage, together with identifiers such as device model, operating system version and Firebase Installation ID. This data is <strong>aggregated and statistical</strong>; nothing about the content of your reminders or your personal information is transmitted this way.</p>
 
-    <h3>3.3 Remote configuration</h3>
+    <h3>3.3 Ads (Google AdMob)</h3>
+    <p>The app shows banner and rewarded ads via <strong>Google AdMob</strong>. To serve and measure ads and prevent fraud, Google may collect and process data such as the <strong>advertising ID</strong> (Android Advertising ID), IP address, device model, operating system version, language setting, approximate location (derived from IP) and ad interactions (impressions, clicks). The content of your reminders is not used for advertising and is not shared with Google.</p>
+    <p>Users in the EEA, UK and Switzerland are asked for consent to personalized ads through Google's User Messaging Platform (UMP). If you do not consent, only non-personalized (limited) ads are shown. You can change your choice from the privacy options in the app settings. You can reset or delete your advertising ID in Android settings (Privacy › Ads).</p>
+    <p>How Google uses this data: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></p>
+
+    <h3>3.4 Remote configuration</h3>
     <p><strong>Firebase Remote Config</strong> is used to update app features from the server (for example, turning certain features such as the history view window or the widget on or off). During this process, an anonymous installation ID assigned to your device communicates with Google's servers; no personal data is sent.</p>
   </section>
 
   <section id="permissions">
     <h2>4. Permissions</h2>
-    <p>The app requests the following permissions for its reminder functionality. None of these permissions are used to collect personal data:</p>
+    <p>The app requests the following permissions:</p>
     <table>
       <tr><th>Permission</th><th>Purpose</th></tr>
       <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>Show a notification when a reminder is due</td></tr>
@@ -109,6 +115,8 @@
       <tr><td>Full-screen notifications (USE_FULL_SCREEN_INTENT)</td><td>Open the reminder screen on the lock screen</td></tr>
       <tr><td>Boot completed (RECEIVE_BOOT_COMPLETED)</td><td>Reschedule alarms after the phone restarts</td></tr>
       <tr><td>Vibrate / keep awake (VIBRATE, WAKE_LOCK)</td><td>Briefly wake the device while showing a notification</td></tr>
+      <tr><td>Internet (INTERNET, ACCESS_NETWORK_STATE)</td><td>Loading ads, analytics and remote configuration</td></tr>
+      <tr><td>Advertising ID (AD_ID)</td><td>Serving and measuring ads (Google AdMob)</td></tr>
     </table>
     <p>The app does <strong>not</strong> request access to location, camera, microphone, contacts or photos.</p>
   </section>
@@ -120,13 +128,14 @@
       <li>Calculating and showing you the remaining count</li>
       <li>Measuring the stability and usability of the app (with anonymous analytics data)</li>
       <li>Determining which features are enabled for you (via remote configuration)</li>
+      <li>Showing ads and measuring ad performance so the app can stay free (Google AdMob)</li>
     </ul>
   </section>
 
   <section id="sharing">
     <h2>6. Sharing and third parties</h2>
-    <p>Your reminder data is <strong>never</strong> shared with third parties, sold or used for advertising. The app contains no ad networks.</p>
-    <p>The app uses the following sub-processor (third-party) service:</p>
+    <p>Your reminder data is <strong>never</strong> shared with third parties, sold or used for advertising.</p>
+    <p>The app uses the following third-party services:</p>
     <table>
       <tr><th>Service</th><th>Purpose</th><th>Policy</th></tr>
       <tr>
@@ -134,18 +143,23 @@
         <td>Anonymous usage statistics and remote feature configuration</td>
         <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
       </tr>
+      <tr>
+        <td>Google AdMob<br><span class="tag">Ads · UMP</span></td>
+        <td>Ad serving, measurement and user consent management</td>
+        <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></td>
+      </tr>
     </table>
   </section>
 
   <section id="retention">
     <h2>7. Retention and deletion</h2>
     <p>Your reminder data is kept on your device until you delete it within the app or uninstall the app. When you uninstall the app, this data is completely removed from your device; the developer keeps no copy.</p>
-    <p>Anonymous usage data collected by Firebase Analytics is automatically deleted or anonymized after a certain period in accordance with Google's own retention policies.</p>
+    <p>Data collected by Firebase Analytics and Google AdMob is automatically deleted or anonymized after a certain period in accordance with Google's own retention policies.</p>
   </section>
 
   <section id="security">
     <h2>8. Data security</h2>
-    <p>Never sending your data to servers is the strongest form of protection. Data on your device is kept within the operating system's app sandbox and is accessible only to someone who can unlock the device. Communication with Google Firebase takes place over an encrypted connection (HTTPS/TLS).</p>
+    <p>Never sending your reminder data to servers is the strongest form of protection. Data on your device is kept within the operating system's app sandbox and is accessible only to someone who can unlock the device. Communication with Google Firebase and Google AdMob takes place over an encrypted connection (HTTPS/TLS).</p>
   </section>
 
   <section id="backup">
@@ -160,7 +174,7 @@
 
   <section id="rights">
     <h2>11. Your rights</h2>
-    <p>Under Article 11 of KVKK and related legislation, you have the right to learn whether your data is processed, to request information, and to request its correction or deletion. Since in-app data is already on your device, you can exercise these rights directly by deleting the relevant record in the app or uninstalling the app. To request deletion of the identifier associated with you in Firebase Analytics, you can contact us at the address below.</p>
+    <p>Under Article 11 of KVKK and related legislation, you have the right to learn whether your data is processed, to request information, and to request its correction or deletion. Since in-app data is already on your device, you can exercise these rights directly by deleting the relevant record in the app or uninstalling the app. To request deletion of the identifier associated with you in Firebase Analytics, you can contact us at the address below. You can withdraw ad personalization consent from the privacy options in the app and reset your advertising ID in Android settings.</p>
   </section>
 
   <section id="changes">
